@@ -1,8 +1,10 @@
+package SelectionProblem;
+
 import java.util.Arrays;
 import java.util.Random;
 
 public class MediansV4 {
-	public static int n = 30;// Controls size of array
+	public static int n = 10;// Controls size of array
 	public static int numComps;
 	public static int numSwaps;
 
@@ -11,7 +13,7 @@ public class MediansV4 {
 
 		Random rand = new Random();
 		for (int i = 0; i < A.length; i++) {
-			A[i] = rand.nextInt(100);
+			A[i] = rand.nextInt(200);
 		}
 		// System.out.println("\n\n unsorted array:");
 		// System.out.println("\n\t" + Arrays.toString(arr));
@@ -29,11 +31,12 @@ public class MediansV4 {
 		// System.out.println("\n\n sorted array:");
 		// System.out.println("\n\t" + Arrays.toString(arr));
 
-		// int[] A = { 7, 35, -2, 4, 16, 1, 0, 9, -10, 3, 45, 11, 10, 100, -5 };
+		//int[] A = { 7, 35, -2, 4, 16, 1, 0, 9, -10, 3, 45, 11, 10, 100, -5,6 };
 		// int[] A = { 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 20, 16, 17,
 		// 19, 18, 88, 22, -1, 16, 14 };
-
+		//almostSort(A,n);
 		System.out.println("A.length= " + A.length);
+		
 		System.out.println("\n**The median is " + median(A));
 		System.out.println("\n unsorted array:");
 		System.out.println("\n\t" + Arrays.toString(A));
@@ -182,13 +185,38 @@ public class MediansV4 {
 				A[i + 1] = A[i];
 				i = i - 1;
 				numSwaps++;
-				;
+				
 			}
 
 			A[i + 1] = key; // reposition key after comparing with A[0] to A[key-1]
 			numSwaps++;
 		}
 
+	}
+	public static int[] almostSort(int arr[], int n) {
+		System.out.print("\n Almost sorted:");
+		numComps = 0;
+		numSwaps = 0;
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = i;
+		}
+		Random r = new Random();
+
+		for (int k = n / 50; k > 0; k--) {
+
+			// Pick a random index from 0 to n
+			int i = r.nextInt(n);
+			int j = r.nextInt(n);
+
+			// Swap arr[i] with the element at arr[j]
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+		}
+		// Prints the random array
+		System.out.println("\n\t" + Arrays.toString(arr));
+
+		return arr;
 	}
 
 	public static int partition(int arr[], int low, int high) {

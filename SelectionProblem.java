@@ -1,3 +1,4 @@
+package SelectionProblem;
 
 /*this class implements the simultaneous min and max 
  * and it also implements the randomized selection algorithm
@@ -6,16 +7,21 @@
 public class SelectionProblem {
 	public static int min;
 	public static int max;
+	public static int numComps;
+	public static int numSwaps;
 
 	public static void getMinMax(int arr[], int n) {
 		int i;
 		if (n % 2 == 0) {
+			numComps++;
 			if (arr[0] > arr[1]) {
 				max = arr[0];
 				min = arr[1];
+				numComps++;
 			} else {
 				min = arr[0];
 				max = arr[1];
+				numComps++;
 			}
 			i = 2; /* set the starting index for loop */
 		}
@@ -33,6 +39,7 @@ public class SelectionProblem {
 		 * min so far
 		 */
 		while (i < n - 1) {
+			
 			if (arr[i] > arr[i + 1]) {
 				if (arr[i] > max)
 					max = arr[i];
@@ -130,12 +137,11 @@ public class SelectionProblem {
 
 }
 
-/*Output:
-Minimum element is 1
-
-Maximum element is 3000
-
-i = 3
-i'th smallest element is 5
-
-*/
+/*
+ * Output: Minimum element is 1
+ * 
+ * Maximum element is 3000
+ * 
+ * i = 3 i'th smallest element is 5
+ * 
+ */
