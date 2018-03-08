@@ -1,6 +1,6 @@
 # SelectionProblem
 Selection Algorithms (Java)
 
-To Do:
 
-  1.Median of Medians Algorithm
+
+    Medians V4 is newest "median of medians";
