@@ -1,6 +1,6 @@
 # SelectionProblem
 Selection Algorithms (Java)
-
-
-
-    Medians V4 is newest "median of medians";
+    
+    1.)Simultaneous Min and Max
+    2.)Randomized Select
+    3.)Median of Medians
