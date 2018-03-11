@@ -18,3 +18,6 @@ Tabulate  results, and draw appropriate conclusions.
 
     Results:
    https://docs.google.com/spreadsheets/d/12BCq9rhxQdmTdGyeuX266xuzaRemMlXSQOJgmYc-BaM/edit?usp=sharing
+
+    Conclusion(in progress):
+   https://docs.google.com/document/d/1ysIR25uPJkZr6sw5H2a4ziZ3FgIQ3tK8mq6f6-3EXUE/edit?usp=sharing
